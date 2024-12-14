@@ -10,9 +10,10 @@ def Identify_s(ip,host):
     while host > start:
         new_num = pow(2,count) - 2
         start = new_num
-        count += 1
+        if host > start:
+            count += 1
 
     slash = 32 - count
   
-    return f"The slash for {ip} with {host}'s is {slash}"
+    return f"The slash for {ip} with {host} hosts is {slash}"
 
